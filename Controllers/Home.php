@@ -9,7 +9,12 @@
 
         public function home($params)
         {
-            $this->views->getView($this,"home");
+
+            //Delcaracion de los atributos que queremos mandar a la vista
+            $data['tag_page'] = "Tienda de Ropa | Home";
+
+
+            $this->views->getView($this,"home", $data);
         }
     }
     
