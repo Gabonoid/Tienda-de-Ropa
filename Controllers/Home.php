@@ -7,7 +7,7 @@
             parent::__construct();
         }
 
-        public function home($params)
+        public function home()
         {
 
             //Delcaracion de los atributos que queremos mandar a la vista
