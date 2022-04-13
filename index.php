@@ -27,29 +27,7 @@
         }
     }
 
+    require_once("Libraries/Core/Autoload.php");
+    require_once("Libraries/Core/Load.php");
 
-    spl_autoload_register(function($class){
-        if(file_exists(LIBS.'Core/'.$class.".php")){
-            require_once(LIBS.'Core/'.$class.".php");
-        }
-    });
-
-    //Load
-    $controllerFile = "Controllers/".$controller.".php";
-
-    //Validamos si existe el Controlador
-    if(file_exists($controllerFile)){
-        require_once($controllerFile);
-        $controller = new $controller();
-
-        //Validadmos si existe el método
-        if(method_exists($controller, $method)){
-            $controller->{$method}($params);
-        }else{
-            echo "No existe el metodo";       
-        }
-    }else{
-        echo "No existe controlador";   
-    }
-
-    ?>
+?>
