@@ -9,7 +9,7 @@
 
         public function home($params)
         {
-            echo "Mensaje desde el controlador";
+            $this->views->getView($this,"home");
         }
     }
     
