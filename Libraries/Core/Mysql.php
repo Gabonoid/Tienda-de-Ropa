@@ -47,5 +47,14 @@
             return $data;
         }
 
+        public function update(string $query, array $arrValues)
+        {
+            $this->strquery = $query;
+            $this->arrValues = $arrValues;
+            $update = $this->conexion->prepare($this->strquery);
+            $resExecute = $update->execute($this->arrValues);
+            return $resExecute;
+        }
+
     }
 ?>
