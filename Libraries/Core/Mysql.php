@@ -38,5 +38,14 @@
             return $data;
         }
 
+        public function select_All($query)
+        {
+            $this->strquery = $query;
+            $result = $this->conexion->prepare($this->strquery);
+            $result->execute();
+            $data = $result->fetchAll(PDO::FETCH_ASSOC);
+            return $data;
+        }
+
     }
 ?>
