@@ -56,5 +56,14 @@
             return $resExecute;
         }
 
+        public function delete(string $query)
+        {
+            $this->strquery = $query;
+            $result = $this->conexion->prepare($this->strquery);
+            $result->execute();
+            return $result;
+
+        }
+
     }
 ?>
