@@ -69,4 +69,10 @@
         $token = $r1 . "-" . $r2 . "-" . $r3 . "-" . $r4;
         return $token;
     }
+
+    function formatMoney($cantidad)
+    {
+        $cantidad = number_format($cantidad,2,SPD,SPM);
+        return $cantidad;
+    }
 ?>
